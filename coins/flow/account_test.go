@@ -24,6 +24,9 @@ func TestSignTx(t *testing.T) {
 	err := SignTx(signAddr, signPrivKeyHex, tx)
 	require.Nil(t, err)
 	txBytes, err := core.TransactionToHTTP(*tx)
+	if err != nil {
+		// todo
+	}
 	require.Nil(t, err)
 	t.Log("tx : ", string(txBytes))
 }
@@ -41,6 +44,9 @@ func TestSignTransferTx(t *testing.T) {
 	err := SignTx(signAddr, signPrivKeyHex, tx)
 	require.Nil(t, err)
 	txBytes, err := core.TransactionToHTTP(*tx)
+	if err != nil {
+		// todo
+	}
 	require.Nil(t, err)
 	t.Log("tx : ", string(txBytes))
 }
